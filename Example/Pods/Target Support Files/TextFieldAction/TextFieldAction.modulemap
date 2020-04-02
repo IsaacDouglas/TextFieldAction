@@ -1,0 +1,6 @@
+framework module TextFieldAction {
+  umbrella header "TextFieldAction-umbrella.h"
+
+  export *
+  module * { export * }
+}

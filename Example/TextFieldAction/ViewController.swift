@@ -7,12 +7,21 @@
 //
 
 import UIKit
+import TextFieldAction
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var cpfTextField: TextFieldAction!
+    @IBOutlet weak var cellphoneTextField: TextFieldAction!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        cpfTextField.actionProtocol = TextFieldAction.actionProtocol({ $0.CPFFormat() })
+        cpfTextField.keyboardType = .numberPad
+        
+        cellphoneTextField.actionProtocol = TextFieldAction.actionProtocol({ $0.cellphoneFormat() })
+        cellphoneTextField.keyboardType = .numberPad
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,4 +30,3 @@ class ViewController: UIViewController {
     }
 
 }
-

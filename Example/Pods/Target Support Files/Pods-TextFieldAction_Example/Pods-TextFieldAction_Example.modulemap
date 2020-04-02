@@ -1,0 +1,6 @@
+framework module Pods_TextFieldAction_Example {
+  umbrella header "Pods-TextFieldAction_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

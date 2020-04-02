@@ -17,12 +17,12 @@ TextFieldAction is available through [CocoaPods](https://cocoapods.org). To inst
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'TextFieldAction'
+pod 'TextFieldAction', :git => 'https://github.com/IsaacDouglas/TextFieldAction.git'
 ```
 
 ## Author
 
-IsaacDouglas, isaacdouglas2015@gmail.com
+Isaac Douglas, isaacdouglas2015@gmail.com
 
 ## License
 

@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,11 +18,54 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CPF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ot1-Ta-iD2">
+                                <rect key="frame" x="36" y="53" width="303" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="123.456.789-10" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lUI-cH-cyP" customClass="TextFieldAction" customModule="TextFieldAction">
+                                <rect key="frame" x="36" y="82" width="303" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cellphone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L2n-1f-Gbz">
+                                <rect key="frame" x="36" y="124" width="303" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="(00) 00000-0000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pk5-Kw-OMX" customClass="TextFieldAction" customModule="TextFieldAction">
+                                <rect key="frame" x="36" y="153" width="303" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pk5-Kw-OMX" firstAttribute="top" secondItem="L2n-1f-Gbz" secondAttribute="bottom" constant="8" id="M7E-1B-bno"/>
+                            <constraint firstItem="lUI-cH-cyP" firstAttribute="top" secondItem="ot1-Ta-iD2" secondAttribute="bottom" constant="8" id="Qqg-d3-BxS"/>
+                            <constraint firstItem="ot1-Ta-iD2" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="UQ0-c8-4KA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pk5-Kw-OMX" secondAttribute="trailing" constant="20" id="Y7d-gO-PtN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ot1-Ta-iD2" secondAttribute="trailing" constant="20" id="YIt-UX-Guo"/>
+                            <constraint firstItem="L2n-1f-Gbz" firstAttribute="top" secondItem="lUI-cH-cyP" secondAttribute="bottom" constant="8" id="YLA-Aq-Ad5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lUI-cH-cyP" secondAttribute="trailing" constant="20" id="Z2T-xn-p6I"/>
+                            <constraint firstItem="pk5-Kw-OMX" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="dPu-dg-xLp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="L2n-1f-Gbz" secondAttribute="trailing" constant="20" id="hjg-65-7Ij"/>
+                            <constraint firstItem="ot1-Ta-iD2" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="53" id="w5v-aQ-8JG"/>
+                            <constraint firstItem="lUI-cH-cyP" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="wXv-cy-ghd"/>
+                            <constraint firstItem="L2n-1f-Gbz" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="ym2-Fq-cOC"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cellphoneTextField" destination="pk5-Kw-OMX" id="2SX-kI-uQk"/>
+                        <outlet property="cpfTextField" destination="lUI-cH-cyP" id="mvl-Mo-L4e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="140" y="132.68365817091455"/>
         </scene>
     </scenes>
 </document>
