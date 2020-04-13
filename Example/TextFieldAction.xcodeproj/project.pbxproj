@@ -47,7 +47,7 @@
 		9BA99004D729400C77BC16B9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		A485CACBCEB1F8457D676230 /* Pods_TextFieldAction_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TextFieldAction_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6ACEA9385E7984DF89D5296 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		D23DE18D0AE0DC19835B7F49 /* TextFieldAction.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = TextFieldAction.podspec; path = ../TextFieldAction.podspec; sourceTree = "<group>"; };
+		D23DE18D0AE0DC19835B7F49 /* TextFieldAction.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = TextFieldAction.podspec; path = ../TextFieldAction.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		F1A3DA241E3ABF2695C82EA3 /* Pods-TextFieldAction_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextFieldAction_Tests.debug.xcconfig"; path = "Target Support Files/Pods-TextFieldAction_Tests/Pods-TextFieldAction_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 

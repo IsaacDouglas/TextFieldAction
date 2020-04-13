@@ -74,6 +74,7 @@
 		909B2FE424367C57001AF991 /* TextFieldAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909B2FE324367C57001AF991 /* TextFieldAction.swift */; };
 		909B2FE624367C84001AF991 /* TextFieldActionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909B2FE524367C84001AF991 /* TextFieldActionProtocol.swift */; };
 		909B2FEA2436A596001AF991 /* ActionDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909B2FE92436A596001AF991 /* ActionDefault.swift */; };
+		90E15F552445159B0058D4AB /* PickerAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E15F542445159B0058D4AB /* PickerAction.swift */; };
 		96C4F7349BB0B624490075CB4F37F2B4 /* CwlCatchBadInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5986608425362EE274C31355DD4A03 /* CwlCatchBadInstruction.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		981D9FBF09890E4E20DF889B2AD514F0 /* BeLessThanOrEqual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D653BA8E32626DC616BC3F0EB54FF5B /* BeLessThanOrEqual.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		99B2BFD67568B9953B86113CF7D1290C /* ThrowAssertion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FC4D1E047104A566D3148C755E519C /* ThrowAssertion.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
@@ -247,6 +248,7 @@
 		909B2FE324367C57001AF991 /* TextFieldAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TextFieldAction.swift; path = TextFieldAction/Classes/TextFieldAction.swift; sourceTree = "<group>"; };
 		909B2FE524367C84001AF991 /* TextFieldActionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TextFieldActionProtocol.swift; path = TextFieldAction/Classes/TextFieldActionProtocol.swift; sourceTree = "<group>"; };
 		909B2FE92436A596001AF991 /* ActionDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ActionDefault.swift; path = TextFieldAction/Classes/ActionDefault.swift; sourceTree = "<group>"; };
+		90E15F542445159B0058D4AB /* PickerAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PickerAction.swift; path = TextFieldAction/Classes/PickerAction.swift; sourceTree = "<group>"; };
 		9505229B314D1CEEBCE387F0CB6D5F42 /* CwlCatchException.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CwlCatchException.m; path = Carthage/Checkouts/CwlCatchException/Sources/CwlCatchExceptionSupport/CwlCatchException.m; sourceTree = "<group>"; };
 		9656D17B98599B7EF29ECED2FE74CDDE /* Nimble-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Nimble-Info.plist"; sourceTree = "<group>"; };
 		97C608BC7628CBDA1197D96A229362F4 /* mach_excServer.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = mach_excServer.c; path = Carthage/Checkouts/CwlPreconditionTesting/Sources/CwlMachBadInstructionHandler/mach_excServer.c; sourceTree = "<group>"; };
@@ -513,6 +515,7 @@
 				909B2FE524367C84001AF991 /* TextFieldActionProtocol.swift */,
 				909B2FE324367C57001AF991 /* TextFieldAction.swift */,
 				909B2FE92436A596001AF991 /* ActionDefault.swift */,
+				90E15F542445159B0058D4AB /* PickerAction.swift */,
 				7E3873D4A7CF772876448D5F824F6327 /* Pod */,
 				EB38BAF7E5E4F45FD7BF387F2D2F4292 /* Support Files */,
 			);
@@ -871,6 +874,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90E15F552445159B0058D4AB /* PickerAction.swift in Sources */,
 				909B2FE624367C84001AF991 /* TextFieldActionProtocol.swift in Sources */,
 				909B2FEA2436A596001AF991 /* ActionDefault.swift in Sources */,
 				583BE1C6B5E6A771D9A8FB938F7BF888 /* TextFieldAction-dummy.m in Sources */,

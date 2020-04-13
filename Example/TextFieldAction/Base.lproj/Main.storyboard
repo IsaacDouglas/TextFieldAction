@@ -41,9 +41,22 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PickerView" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ubN-CZ-uiv">
+                                <rect key="frame" x="36" y="195" width="303" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="lorem" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YPE-M9-4Hs" customClass="TextFieldAction" customModule="TextFieldAction">
+                                <rect key="frame" x="36" y="224" width="303" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="YPE-M9-4Hs" firstAttribute="top" secondItem="ubN-CZ-uiv" secondAttribute="bottom" constant="8" id="D9S-lw-BlI"/>
+                            <constraint firstItem="ubN-CZ-uiv" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="EAP-1y-AxF"/>
                             <constraint firstItem="pk5-Kw-OMX" firstAttribute="top" secondItem="L2n-1f-Gbz" secondAttribute="bottom" constant="8" id="M7E-1B-bno"/>
                             <constraint firstItem="lUI-cH-cyP" firstAttribute="top" secondItem="ot1-Ta-iD2" secondAttribute="bottom" constant="8" id="Qqg-d3-BxS"/>
                             <constraint firstItem="ot1-Ta-iD2" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="UQ0-c8-4KA"/>
@@ -53,14 +66,19 @@
                             <constraint firstAttribute="trailingMargin" secondItem="lUI-cH-cyP" secondAttribute="trailing" constant="20" id="Z2T-xn-p6I"/>
                             <constraint firstItem="pk5-Kw-OMX" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="dPu-dg-xLp"/>
                             <constraint firstAttribute="trailingMargin" secondItem="L2n-1f-Gbz" secondAttribute="trailing" constant="20" id="hjg-65-7Ij"/>
+                            <constraint firstItem="ubN-CZ-uiv" firstAttribute="top" secondItem="pk5-Kw-OMX" secondAttribute="bottom" constant="8" id="m34-nC-y3g"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YPE-M9-4Hs" secondAttribute="trailing" constant="20" id="mLe-yo-4FY"/>
+                            <constraint firstItem="YPE-M9-4Hs" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="p1m-Qt-1bt"/>
                             <constraint firstItem="ot1-Ta-iD2" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="53" id="w5v-aQ-8JG"/>
                             <constraint firstItem="lUI-cH-cyP" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="wXv-cy-ghd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ubN-CZ-uiv" secondAttribute="trailing" constant="20" id="xxY-93-l0e"/>
                             <constraint firstItem="L2n-1f-Gbz" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="ym2-Fq-cOC"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="cellphoneTextField" destination="pk5-Kw-OMX" id="2SX-kI-uQk"/>
                         <outlet property="cpfTextField" destination="lUI-cH-cyP" id="mvl-Mo-L4e"/>
+                        <outlet property="pickerTextField" destination="YPE-M9-4Hs" id="Gck-D7-OiI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

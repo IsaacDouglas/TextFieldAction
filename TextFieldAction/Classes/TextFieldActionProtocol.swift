@@ -15,4 +15,14 @@ public protocol TextFieldActionProtocol {
     
     func event() -> UIControl.Event
     func eventAction(_ textField: TextFieldAction) -> String
+    func inputView(_ textField: TextFieldAction) -> UIView?
+    func begin(_ textField: TextFieldAction)
+}
+
+public extension TextFieldActionProtocol {
+    func inputView(_ textField: TextFieldAction) -> UIView? {
+        return nil
+    }
+    
+    func begin(_ textField: TextFieldAction) { }
 }

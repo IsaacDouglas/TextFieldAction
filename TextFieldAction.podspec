@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'TextFieldAction'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = 'Format text entry in UITextField easily.'
   s.description      = 'Format text entry in UITextField easily.'
   s.homepage         = 'https://github.com/IsaacDouglas/TextFieldAction'
