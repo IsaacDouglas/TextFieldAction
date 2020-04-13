@@ -55,7 +55,7 @@ class PickerAction: TextFieldActionProtocol {
 }
  
 class PikerViewAction: UIPickerView {
-    private var action: ((PikerViewAction) -> ())?
+    internal var action: ((PikerViewAction) -> ())?
     
     var items = [String]()
     var itemSelected: String?
