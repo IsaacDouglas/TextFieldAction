@@ -48,6 +48,7 @@ class PickerAction: TextFieldActionProtocol {
         guard let item = self.itemsPicker.first else { return }
         
         if textField.text == nil || textField.text!.isEmpty {
+            self.didChange?(item)
             textField.text = item
         }
     }
