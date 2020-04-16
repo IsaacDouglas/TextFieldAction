@@ -7,6 +7,7 @@
 
 import UIKit
 
+@available(*, deprecated, message: "Use InputActionType")
 public protocol TextFieldActionProtocol {
     
     var didChange: ((String) -> Void)? { get set }

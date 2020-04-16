@@ -7,11 +7,13 @@
 
 import UIKit
 
+@available(*, deprecated, message: "Use UITextFieldAction")
 public class TextFieldAction: UITextField {
     
     public var editAction: Bool = true
     private var action: ((TextFieldAction) -> String)?
     
+    @available(*, deprecated, message: "Use UITextFieldAction with inputAction")
     public var actionProtocol: TextFieldActionProtocol? {
         didSet {
             guard let action = self.actionProtocol else { return }

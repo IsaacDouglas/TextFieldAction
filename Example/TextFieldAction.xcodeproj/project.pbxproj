@@ -13,6 +13,7 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		900BE7672448A8D500FC2F79 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900BE7662448A8D500FC2F79 /* Date.swift */; };
 		909B2FEC2436B322001AF991 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909B2FEB2436B322001AF991 /* String.swift */; };
 		96205B0D77B36E92181059FA /* Pods_TextFieldAction_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46746F96C54362F36418AC3A /* Pods_TextFieldAction_Example.framework */; };
 		EFAF1C4BF269129EB0E9E9B7 /* Pods_TextFieldAction_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A485CACBCEB1F8457D676230 /* Pods_TextFieldAction_Tests.framework */; };
@@ -43,6 +44,7 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		731A3D4D235EA19CA744FB2C /* Pods-TextFieldAction_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextFieldAction_Tests.release.xcconfig"; path = "Target Support Files/Pods-TextFieldAction_Tests/Pods-TextFieldAction_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		900BE7662448A8D500FC2F79 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		909B2FEB2436B322001AF991 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		9BA99004D729400C77BC16B9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		A485CACBCEB1F8457D676230 /* Pods_TextFieldAction_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TextFieldAction_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,6 +100,7 @@
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				909B2FEB2436B322001AF991 /* String.swift */,
+				900BE7662448A8D500FC2F79 /* Date.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -358,6 +361,7 @@
 				909B2FEC2436B322001AF991 /* String.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				900BE7672448A8D500FC2F79 /* Date.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

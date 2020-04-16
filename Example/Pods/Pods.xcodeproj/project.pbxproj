@@ -71,6 +71,9 @@
 		8CB9325284A6E8E782D34AF833480CA3 /* BeGreaterThan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71166542797DC4AAA93BD65C22E39C89 /* BeGreaterThan.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		8D16EAB20CD849E7DC1B1EDCEF61067D /* QCKDSL.h in Headers */ = {isa = PBXBuildFile; fileRef = 5464B1BECD8C28E62D14D83A07FFD52A /* QCKDSL.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8F59DA3D3E28A143E5ADF7611B30AA49 /* Pods-TextFieldAction_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C7DF1C551B2626C879EE048ECA22B7 /* Pods-TextFieldAction_Tests-dummy.m */; };
+		900BE76B2448AFCE00FC2F79 /* UITextFieldAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900BE7682448AFCD00FC2F79 /* UITextFieldAction.swift */; };
+		900BE76C2448AFCE00FC2F79 /* UITextFieldActionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900BE7692448AFCE00FC2F79 /* UITextFieldActionType.swift */; };
+		900BE76D2448AFCE00FC2F79 /* InputActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900BE76A2448AFCE00FC2F79 /* InputActions.swift */; };
 		909B2FE424367C57001AF991 /* TextFieldAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909B2FE324367C57001AF991 /* TextFieldAction.swift */; };
 		909B2FE624367C84001AF991 /* TextFieldActionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909B2FE524367C84001AF991 /* TextFieldActionProtocol.swift */; };
 		909B2FEA2436A596001AF991 /* ActionDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909B2FE92436A596001AF991 /* ActionDefault.swift */; };
@@ -245,6 +248,9 @@
 		8BC5AE7BFF72CEE1FA2E53728D0E9F25 /* Quick.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Quick.xcconfig; sourceTree = "<group>"; };
 		8CE49331BD7286B48806A35DE25F06F1 /* Pods-TextFieldAction_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TextFieldAction_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		8D9DA7DF96D998195C1DD500F02A960F /* ThrowError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThrowError.swift; path = Sources/Nimble/Matchers/ThrowError.swift; sourceTree = "<group>"; };
+		900BE7682448AFCD00FC2F79 /* UITextFieldAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UITextFieldAction.swift; path = TextFieldAction/Classes/UITextFieldAction.swift; sourceTree = "<group>"; };
+		900BE7692448AFCE00FC2F79 /* UITextFieldActionType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UITextFieldActionType.swift; path = TextFieldAction/Classes/UITextFieldActionType.swift; sourceTree = "<group>"; };
+		900BE76A2448AFCE00FC2F79 /* InputActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InputActions.swift; path = TextFieldAction/Classes/InputActions.swift; sourceTree = "<group>"; };
 		909B2FE324367C57001AF991 /* TextFieldAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TextFieldAction.swift; path = TextFieldAction/Classes/TextFieldAction.swift; sourceTree = "<group>"; };
 		909B2FE524367C84001AF991 /* TextFieldActionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TextFieldActionProtocol.swift; path = TextFieldAction/Classes/TextFieldActionProtocol.swift; sourceTree = "<group>"; };
 		909B2FE92436A596001AF991 /* ActionDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ActionDefault.swift; path = TextFieldAction/Classes/ActionDefault.swift; sourceTree = "<group>"; };
@@ -512,6 +518,9 @@
 		3CF87CFACCD02AE5EF237A79DC0534EA /* TextFieldAction */ = {
 			isa = PBXGroup;
 			children = (
+				900BE7692448AFCE00FC2F79 /* UITextFieldActionType.swift */,
+				900BE7682448AFCD00FC2F79 /* UITextFieldAction.swift */,
+				900BE76A2448AFCE00FC2F79 /* InputActions.swift */,
 				909B2FE524367C84001AF991 /* TextFieldActionProtocol.swift */,
 				909B2FE324367C57001AF991 /* TextFieldAction.swift */,
 				909B2FE92436A596001AF991 /* ActionDefault.swift */,
@@ -879,6 +888,9 @@
 				909B2FEA2436A596001AF991 /* ActionDefault.swift in Sources */,
 				583BE1C6B5E6A771D9A8FB938F7BF888 /* TextFieldAction-dummy.m in Sources */,
 				909B2FE424367C57001AF991 /* TextFieldAction.swift in Sources */,
+				900BE76B2448AFCE00FC2F79 /* UITextFieldAction.swift in Sources */,
+				900BE76D2448AFCE00FC2F79 /* InputActions.swift in Sources */,
+				900BE76C2448AFCE00FC2F79 /* UITextFieldActionType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

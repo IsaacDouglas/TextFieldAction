@@ -25,7 +25,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="123.456.789-10" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lUI-cH-cyP" customClass="TextFieldAction" customModule="TextFieldAction">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="123.456.789-10" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lUI-cH-cyP" customClass="UITextFieldAction" customModule="TextFieldAction">
                                 <rect key="frame" x="36" y="82" width="303" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -36,7 +36,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="(00) 00000-0000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pk5-Kw-OMX" customClass="TextFieldAction" customModule="TextFieldAction">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="(00) 00000-0000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pk5-Kw-OMX" customClass="UITextFieldAction" customModule="TextFieldAction">
                                 <rect key="frame" x="36" y="153" width="303" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -47,28 +47,45 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="lorem" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YPE-M9-4Hs" customClass="TextFieldAction" customModule="TextFieldAction">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="lorem" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YPE-M9-4Hs" customClass="UITextFieldAction" customModule="TextFieldAction">
                                 <rect key="frame" x="36" y="224" width="303" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DatePicker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NlM-ag-GQG">
+                                <rect key="frame" x="36" y="266" width="303" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="01/01/2020" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NSx-sh-xsd" customClass="UITextFieldAction" customModule="TextFieldAction">
+                                <rect key="frame" x="36" y="295" width="303" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="NlM-ag-GQG" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="6Fc-eh-nVe"/>
                             <constraint firstItem="YPE-M9-4Hs" firstAttribute="top" secondItem="ubN-CZ-uiv" secondAttribute="bottom" constant="8" id="D9S-lw-BlI"/>
                             <constraint firstItem="ubN-CZ-uiv" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="EAP-1y-AxF"/>
+                            <constraint firstItem="NSx-sh-xsd" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="LJ2-l3-jeU"/>
                             <constraint firstItem="pk5-Kw-OMX" firstAttribute="top" secondItem="L2n-1f-Gbz" secondAttribute="bottom" constant="8" id="M7E-1B-bno"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NlM-ag-GQG" secondAttribute="trailing" constant="20" id="MMF-q4-U4L"/>
                             <constraint firstItem="lUI-cH-cyP" firstAttribute="top" secondItem="ot1-Ta-iD2" secondAttribute="bottom" constant="8" id="Qqg-d3-BxS"/>
                             <constraint firstItem="ot1-Ta-iD2" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="UQ0-c8-4KA"/>
+                            <constraint firstItem="NlM-ag-GQG" firstAttribute="top" secondItem="YPE-M9-4Hs" secondAttribute="bottom" constant="8" id="XOb-IY-1TE"/>
                             <constraint firstAttribute="trailingMargin" secondItem="pk5-Kw-OMX" secondAttribute="trailing" constant="20" id="Y7d-gO-PtN"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ot1-Ta-iD2" secondAttribute="trailing" constant="20" id="YIt-UX-Guo"/>
                             <constraint firstItem="L2n-1f-Gbz" firstAttribute="top" secondItem="lUI-cH-cyP" secondAttribute="bottom" constant="8" id="YLA-Aq-Ad5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lUI-cH-cyP" secondAttribute="trailing" constant="20" id="Z2T-xn-p6I"/>
                             <constraint firstItem="pk5-Kw-OMX" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="dPu-dg-xLp"/>
                             <constraint firstAttribute="trailingMargin" secondItem="L2n-1f-Gbz" secondAttribute="trailing" constant="20" id="hjg-65-7Ij"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NSx-sh-xsd" secondAttribute="trailing" constant="20" id="kd7-fo-iDf"/>
                             <constraint firstItem="ubN-CZ-uiv" firstAttribute="top" secondItem="pk5-Kw-OMX" secondAttribute="bottom" constant="8" id="m34-nC-y3g"/>
                             <constraint firstAttribute="trailingMargin" secondItem="YPE-M9-4Hs" secondAttribute="trailing" constant="20" id="mLe-yo-4FY"/>
                             <constraint firstItem="YPE-M9-4Hs" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="p1m-Qt-1bt"/>
+                            <constraint firstItem="NSx-sh-xsd" firstAttribute="top" secondItem="NlM-ag-GQG" secondAttribute="bottom" constant="8" id="sfX-UD-XG0"/>
                             <constraint firstItem="ot1-Ta-iD2" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="53" id="w5v-aQ-8JG"/>
                             <constraint firstItem="lUI-cH-cyP" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="wXv-cy-ghd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ubN-CZ-uiv" secondAttribute="trailing" constant="20" id="xxY-93-l0e"/>
@@ -76,9 +93,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="cellphoneTextField" destination="pk5-Kw-OMX" id="2SX-kI-uQk"/>
-                        <outlet property="cpfTextField" destination="lUI-cH-cyP" id="mvl-Mo-L4e"/>
-                        <outlet property="pickerTextField" destination="YPE-M9-4Hs" id="Gck-D7-OiI"/>
+                        <outlet property="cellphoneTextField" destination="pk5-Kw-OMX" id="n0a-wV-WnB"/>
+                        <outlet property="cpfTextField" destination="lUI-cH-cyP" id="2o2-R8-v3s"/>
+                        <outlet property="datePickerTextField" destination="NSx-sh-xsd" id="FB3-22-VSQ"/>
+                        <outlet property="pickerTextField" destination="YPE-M9-4Hs" id="1FM-hf-RTy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

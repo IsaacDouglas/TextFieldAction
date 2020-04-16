@@ -7,6 +7,7 @@
 
 import Foundation
 
+@available(*, deprecated, message: "Use UITextFieldAction with InputFormatTextAction")
 class ActionDefault: TextFieldActionProtocol {
     
     var didChange: ((String) -> Void)?

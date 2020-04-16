@@ -7,6 +7,7 @@
 
 import UIKit
 
+@available(*, deprecated, message: "Use UITextFieldAction with InputPickerViewAction")
 class PickerAction: TextFieldActionProtocol {
     
     var didChange: ((String) -> Void)?
@@ -55,7 +56,7 @@ class PickerAction: TextFieldActionProtocol {
     
 }
  
-class PikerViewAction: UIPickerView {
+fileprivate class PikerViewAction: UIPickerView {
     internal var action: ((PikerViewAction) -> ())?
     
     var items = [String]()
