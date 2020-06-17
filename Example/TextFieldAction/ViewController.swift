@@ -15,12 +15,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var cellphoneTextField: UITextFieldAction!
     @IBOutlet weak var pickerTextField: UITextFieldAction!
     @IBOutlet weak var datePickerTextField: UITextFieldAction!
+    @IBOutlet weak var pickerTextFieldComponents: UITextFieldAction!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let items = ["lorem", "ipsum", "dolor", "sit", "amet"]
         pickerTextField.inputAction = InputPickerViewAction(items, { $0 })
+
+        pickerTextFieldComponents.inputAction = InputPickerViewComponentsAction([items, items], { $0.joined(separator: " - ") })
         
         cpfTextField.inputAction = InputFormatTextAction({ $0.CPFFormat() })
         cpfTextField.keyboardType = .numberPad

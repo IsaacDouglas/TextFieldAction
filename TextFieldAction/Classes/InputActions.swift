@@ -128,3 +128,85 @@ fileprivate class UIDatePickerViewAction: UIDatePicker {
         self.action?(self)
     }
 }
+
+// MARK: - InputPickerViewComponentsAction
+public class InputPickerViewComponentsAction: InputActionType {
+    public typealias T = [String]
+    
+    public var didChange: (([String]) -> String)
+    public var items = [[String]]()
+    
+    required public init(_ didChange: @escaping (([String]) -> String)) {
+        self.didChange = didChange
+    }
+    
+    required public init(_ items: [[String]], _ didChange: @escaping (([String]) -> String)) {
+        self.didChange = didChange
+        self.items = items
+    }
+    
+    public func eventAction(_ textField: UITextFieldAction) { }
+    
+    public func beginAction(_ textField: UITextFieldAction) {
+        let first = self.items
+            .filter({ !$0.isEmpty })
+            .map({ $0[0] })
+        
+        if first.count == self.items.count && (textField.text == nil || textField.text!.isEmpty) {
+            textField.text = self.didChange(first)
+        }
+    }
+    
+    public func inputView(_ textField: UITextFieldAction) -> UIView? {
+        let picker = UIPickerViewComponentsAction()
+        picker.items = self.items
+        
+        let first = self.items
+            .filter({ !$0.isEmpty })
+            .map({ $0[0] })
+        
+        if first.count == self.items.count {
+            picker.itemSelected = first
+        } else {
+            picker.itemSelected = (0 ..< self.items.count).map({ _ in "" })
+        }
+        
+        picker.setAction(action: { picker in
+            let item = picker.itemSelected
+            textField.text = self.didChange(item)
+        })
+        return picker
+    }
+}
+
+fileprivate class UIPickerViewComponentsAction: UIPickerView {
+    internal var action: ((UIPickerViewComponentsAction) -> Void)?
+    
+    var items = [[String]]()
+    var itemSelected = [String]()
+    
+    func setAction(action: @escaping ((UIPickerViewComponentsAction) -> Void)) {
+        self.action = action
+        self.delegate = self
+        self.dataSource = self
+    }
+}
+
+extension UIPickerViewComponentsAction: UIPickerViewDelegate, UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return self.items.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return self.items[component].count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return self.items[component][row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        self.itemSelected[component] = self.items[component][row]
+        self.action?(self)
+    }
+}
