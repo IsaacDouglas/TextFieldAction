@@ -20,9 +20,21 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let items = ["lorem", "ipsum", "dolor", "sit", "amet"]
-        pickerTextField.inputAction = InputPickerViewAction(items, { $0 })
+        struct Text {
+            let title: String
+            let subtitle: String
+        }
+        
+        let list = [Text(title: "Title 1", subtitle: "Subtitle 1"),
+                    Text(title: "Title 2", subtitle: "Subtitle 2"),
+                    Text(title: "Title 3", subtitle: "Subtitle 3")]
+        
+        pickerTextField.inputAction = InputPickerViewActionObject<Text>(list, { text in
+            print(text.subtitle)
+            return text.title
+        })
 
+        let items = ["lorem", "ipsum", "dolor", "sit", "amet"]
         pickerTextFieldComponents.inputAction = InputPickerViewComponentsAction([items, items], { $0.joined(separator: " - ") })
         
         cpfTextField.inputAction = InputFormatTextAction({ $0.CPFFormat() })

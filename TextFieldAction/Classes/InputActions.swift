@@ -49,7 +49,45 @@ public class InputPickerViewAction: InputActionType {
     }
     
     public func inputView(_ textField: UITextFieldAction) -> UIView? {
-        let picker = UIPickerViewAction()
+        let picker = UIPickerViewAction<T>()
+        picker.items = self.items
+        picker.transformItem = self.didChange
+        picker.setAction(action: { picker in
+            guard let item = picker.itemSelected else { return }
+            textField.text = self.didChange(item)
+        })
+        return picker
+    }
+}
+
+// MARK: - InputPickerViewActionObject
+public class InputPickerViewActionObject<U>: InputActionType {
+    public typealias T = U
+    
+    public var didChange: ((U) -> String)
+    public var items = [U]()
+    
+    required public init(_ didChange: @escaping ((U) -> String)) {
+        self.didChange = didChange
+    }
+    
+    required public init(_ items: [U], _ didChange: @escaping ((U) -> String)) {
+        self.didChange = didChange
+        self.items = items
+    }
+    
+    public func eventAction(_ textField: UITextFieldAction) { }
+    
+    public func beginAction(_ textField: UITextFieldAction) {
+        guard let first = self.items.first else { return }
+        if textField.text == nil || textField.text!.isEmpty {
+            textField.text = self.didChange(first)
+        }
+    }
+    
+    public func inputView(_ textField: UITextFieldAction) -> UIView? {
+        let picker = UIPickerViewAction<U>()
+        picker.transformItem = self.didChange
         picker.items = self.items
         picker.setAction(action: { picker in
             guard let item = picker.itemSelected else { return }
@@ -59,20 +97,19 @@ public class InputPickerViewAction: InputActionType {
     }
 }
 
-fileprivate class UIPickerViewAction: UIPickerView {
+fileprivate class UIPickerViewAction<T>: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSource {
     internal var action: ((UIPickerViewAction) -> Void)?
     
-    var items = [String]()
-    var itemSelected: String?
+    var items = [T]()
+    var itemSelected: T?
+    var transformItem: ((T) -> String)?
     
     func setAction(action: @escaping ((UIPickerViewAction) -> Void)) {
         self.action = action
         self.delegate = self
         self.dataSource = self
     }
-}
 
-extension UIPickerViewAction: UIPickerViewDelegate, UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -82,7 +119,8 @@ extension UIPickerViewAction: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return self.items[row]
+        let item = self.items[row]
+        return self.transformItem?(item)
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
