@@ -12,6 +12,7 @@ public class InputFormatTextAction: InputActionType {
     public typealias T = String
     
     public var didChange: ((String) -> String)
+    public var inputAndResultHandler: ((T, String) -> Void)?
     
     required public init(_ didChange: @escaping ((String) -> String)) {
         self.didChange = didChange
@@ -19,15 +20,19 @@ public class InputFormatTextAction: InputActionType {
     
     public func eventAction(_ textField: UITextFieldAction) {
         guard let text = textField.text else { return }
-        textField.text = self.didChange(text)
+        let result = self.didChange(text)
+        textField.text = result
+        self.inputAndResultHandler?(text, result)
     }
 }
 
 // MARK: - InputPickerViewAction
 public class InputPickerViewAction: InputActionType {
+    
     public typealias T = String
     
     public var didChange: ((String) -> String)
+    public var inputAndResultHandler: ((T, String) -> Void)?
     public var items = [String]()
     
     required public init(_ didChange: @escaping ((String) -> String)) {
@@ -44,7 +49,9 @@ public class InputPickerViewAction: InputActionType {
     public func beginAction(_ textField: UITextFieldAction) {
         guard let first = self.items.first else { return }
         if textField.text == nil || textField.text!.isEmpty {
-            textField.text = self.didChange(first)
+            let result = self.didChange(first)
+            textField.text = result
+            self.inputAndResultHandler?(first, result)
         }
     }
     
@@ -54,7 +61,9 @@ public class InputPickerViewAction: InputActionType {
         picker.transformItem = self.didChange
         picker.setAction(action: { picker in
             guard let item = picker.itemSelected else { return }
-            textField.text = self.didChange(item)
+            let result = self.didChange(item)
+            textField.text = result
+            self.inputAndResultHandler?(item, result)
         })
         return picker
     }
@@ -65,6 +74,7 @@ public class InputPickerViewActionObject<U>: InputActionType {
     public typealias T = U
     
     public var didChange: ((U) -> String)
+    public var inputAndResultHandler: ((T, String) -> Void)?
     public var items = [U]()
     
     required public init(_ didChange: @escaping ((U) -> String)) {
@@ -81,7 +91,9 @@ public class InputPickerViewActionObject<U>: InputActionType {
     public func beginAction(_ textField: UITextFieldAction) {
         guard let first = self.items.first else { return }
         if textField.text == nil || textField.text!.isEmpty {
-            textField.text = self.didChange(first)
+            let result = self.didChange(first)
+            textField.text = result
+            self.inputAndResultHandler?(first, result)
         }
     }
     
@@ -91,7 +103,9 @@ public class InputPickerViewActionObject<U>: InputActionType {
         picker.items = self.items
         picker.setAction(action: { picker in
             guard let item = picker.itemSelected else { return }
-            textField.text = self.didChange(item)
+            let result = self.didChange(item)
+            textField.text = result
+            self.inputAndResultHandler?(item, result)
         })
         return picker
     }
@@ -134,6 +148,7 @@ public class InputDatePickerAction: InputActionType {
     public typealias T = Date
     
     public var didChange: ((Date) -> String)
+    public var inputAndResultHandler: ((T, String) -> Void)?
     
     public let dataPicker: UIDatePicker
     
@@ -148,7 +163,9 @@ public class InputDatePickerAction: InputActionType {
         guard let dataPicker = self.dataPicker as? UIDatePickerViewAction else { return nil }
         dataPicker.setAction(event: .valueChanged, action: { datePicker in
             let date = datePicker.date
-            textField.text = self.didChange(date)
+            let result = self.didChange(date)
+            textField.text = result
+            self.inputAndResultHandler?(date, result)
         })
         return dataPicker
     }
@@ -172,6 +189,7 @@ public class InputPickerViewComponentsAction: InputActionType {
     public typealias T = [String]
     
     public var didChange: (([String]) -> String)
+    public var inputAndResultHandler: ((T, String) -> Void)?
     public var items = [[String]]()
     
     required public init(_ didChange: @escaping (([String]) -> String)) {
@@ -191,7 +209,9 @@ public class InputPickerViewComponentsAction: InputActionType {
             .map({ $0[0] })
         
         if first.count == self.items.count && (textField.text == nil || textField.text!.isEmpty) {
-            textField.text = self.didChange(first)
+            let result = self.didChange(first)
+            textField.text = result
+            self.inputAndResultHandler?(first, result)
         }
     }
     
@@ -211,7 +231,9 @@ public class InputPickerViewComponentsAction: InputActionType {
         
         picker.setAction(action: { picker in
             let item = picker.itemSelected
-            textField.text = self.didChange(item)
+            let result = self.didChange(item)
+            textField.text = result
+            self.inputAndResultHandler?(item, result)
         })
         return picker
     }

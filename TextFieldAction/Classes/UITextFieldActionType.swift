@@ -7,7 +7,7 @@
 
 import UIKit
 
-public protocol InputActionTypeBase: class {
+public protocol InputActionTypeBase: AnyObject {
     func event() -> UIControl.Event
     func inputView(_ textField: UITextFieldAction) -> UIView?
     func eventAction(_ textField: UITextFieldAction)
@@ -24,6 +24,7 @@ public protocol InputActionType: InputActionTypeBase {
     associatedtype T
     
     var didChange: ((T) -> String) { get set }
+    var inputAndResultHandler: ((T, String) -> Void)? { get set }
     
     init(_ didChange: @escaping ((T) -> String))
 }
