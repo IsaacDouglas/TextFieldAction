@@ -7,9 +7,10 @@
 
 import UIKit
 
-public class UITextFieldAction: UITextField {
+open class UITextFieldAction: UITextField {
     
     public var editAction: Bool = true
+    public var deleteBackwardHandle: ((_ befofe: String?, _ after: String?) -> Void)?
     
     public var inputAction: InputActionTypeBase? {
         didSet {
@@ -30,5 +31,11 @@ public class UITextFieldAction: UITextField {
     
     public override func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {
         return self.editAction ? super.canPerformAction(action, withSender: sender) : false
+    }
+
+    public override func deleteBackward() {
+        let before = self.text
+        super.deleteBackward()
+        self.deleteBackwardHandle?(before, self.text)
     }
 }

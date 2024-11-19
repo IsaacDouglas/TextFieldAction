@@ -8,7 +8,7 @@
 import UIKit
 
 // MARK: - InputFormatTextAction
-public class InputFormatTextAction: InputActionType {
+open class InputFormatTextAction: InputActionType {
     public typealias T = String
     
     public var didChange: ((String) -> String)
@@ -27,7 +27,7 @@ public class InputFormatTextAction: InputActionType {
 }
 
 // MARK: - InputPickerViewAction
-public class InputPickerViewAction: InputActionType {
+open class InputPickerViewAction: InputActionType {
     
     public typealias T = String
     
@@ -70,7 +70,7 @@ public class InputPickerViewAction: InputActionType {
 }
 
 // MARK: - InputPickerViewActionObject
-public class InputPickerViewActionObject<U>: InputActionType {
+open class InputPickerViewActionObject<U>: InputActionType {
     public typealias T = U
     
     public var didChange: ((U) -> String)
@@ -144,7 +144,7 @@ fileprivate class UIPickerViewAction<T>: UIPickerView, UIPickerViewDelegate, UIP
 }
 
 // MARK: - InputDatePickerAction
-public class InputDatePickerAction: InputActionType {
+open class InputDatePickerAction: InputActionType {
     public typealias T = Date
     
     public var didChange: ((Date) -> String)
@@ -185,7 +185,7 @@ fileprivate class UIDatePickerViewAction: UIDatePicker {
 }
 
 // MARK: - InputPickerViewComponentsAction
-public class InputPickerViewComponentsAction: InputActionType {
+open class InputPickerViewComponentsAction: InputActionType {
     public typealias T = [String]
     
     public var didChange: (([String]) -> String)
